@@ -22,8 +22,7 @@ let numberVal_d = Number(num_d);
 let num_e = true;
 let numberVal_e = Number(num_e);
 // console.table([{numberVal_e : numberVal_e, numberVal_e_type: typeof numberVal_e}]);
-//true => NaN (number)
-
+//true => 1 (number)
 
 let num_f = "";
 let numberVal_f = Boolean(num_f);
@@ -77,12 +76,12 @@ let numberVal_o = String(num_o);
 
 let num_p = "bac";
 let numberVal_p = Object(num_p);
-//console.table([{numberVal_p : numberVal_p, numberVal_p_type: typeof numberVal_p}]);
-//"bac" =>  [String: 'undefined'] (object)
+// console.table([{numberVal_p : numberVal_p, numberVal_p_type: typeof numberVal_p}]);
+//"bac" =>  [String: 'bac'] (object)
 
 let num_q = null;
 let numberVal_q = Object(num_q);
-//console.table([{numberVal_q : numberVal_q, numberVal_q_type: typeof numberVal_q}]);
+// console.table([{numberVal_q : numberVal_q, numberVal_q_type: typeof numberVal_q}]);
 //null => {} (object)
 
 let num_r = 1234;
@@ -92,7 +91,7 @@ let numberVal_r = Object(num_r);
 
 let num_s = undefined;
 let numberVal_s = Object(num_s);
-console.table([{numberVal_s : numberVal_s, numberVal_s_type: typeof numberVal_s}]);
+// console.table([{numberVal_s : numberVal_s, numberVal_s_type: typeof numberVal_s}]);
 //undefined => {} (object)
 
 // [numberVal_f].forEach( e => {
