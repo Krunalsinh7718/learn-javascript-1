@@ -11,7 +11,17 @@
 //object
 
 let a = ['1','2','3'];
+const b = 1150;
+const c = "abcd";
+const d = true;
 
-console.log(typeof Symbol);
-console.log(typeof null);
-console.log(typeof undefined);
+console.table([{
+    a_array: typeof a, 
+    b_number : typeof b, 
+    c_string : typeof c, 
+    d_boolean: typeof d,
+    e_null: typeof null,
+    f_undefined: typeof undefined,
+    g_NaN : typeof NaN
+}])
+
