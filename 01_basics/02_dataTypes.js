@@ -21,7 +21,9 @@
 //symbol => unique
 
 /* non primitive ( reference ) data type */
-//Array, object, functions
+//Array
+//object
+//functions
 
 let a = ['1','2','3'];
 const b = 1150;

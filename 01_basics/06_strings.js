@@ -2,11 +2,10 @@ const text = "hello world";
 const text1 = new String("hello India!");
 const text2 = "The quick brown fox~ jumps. over the lazy dog. If the dog barked, was it really lazy?";
 
-
 //0) length of string
 // console.log(text.length);
 
-//1) sell the functions (run below code in browser and check Prototype for attached methods and properties of string class)
+//1) string functions abd properties (run below code in browser and check Prototype for attached methods and properties of string class)
 //console.log(text1);
 
 //2) get character at specific index
@@ -51,4 +50,5 @@ const text2 = "The quick brown fox~ jumps. over the lazy dog. If the dog barked,
 //other trim function => trimEnd(), trimRight(), trimStart(), trimLeft()
 // /*2) toLowerCase */ console.log("HELLO".toLowerCase()); //return toLowerCase string
 // /*3) toUpperCase */ console.log("world".toUpperCase()); //return toUpperCase string
+// /*4) toString */ let num1 = 11; console.log(num1.toString(), typeof num1.toString()); //convert to string
 
