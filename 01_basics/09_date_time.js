@@ -164,3 +164,7 @@ const date = new Date();
 //     year: 'numeric'
 // });
 // console.log(dateFormat1.format(new Date()));
+
+//---p) using string interpolation
+// hear month is 0 index based. so add 1 after getMonth()
+// console.log(`${ date.getDate() }/${ date.getMonth() + 1 }/${ date.getFullYear() } `);
