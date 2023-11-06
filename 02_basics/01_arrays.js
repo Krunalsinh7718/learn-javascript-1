@@ -1,4 +1,4 @@
-// 1) declaration methods ############################################################
+// 1) how to declare array ############################################################
 
 // const arr1 = ['a','b','c'];
 // const arr2 = new Array('a','b','c');
@@ -292,11 +292,7 @@
 // // Expected output: Array [1, "b"]
 
 
-
-
-
-
-// *) join
+// ----> b) join
 //creates and returns a new string by concatenating all of the elements in this array, 
 //separated by commas or a specified separator string. 
 //If the array has only one item, then that item will be returned without using the separator.
@@ -313,7 +309,7 @@
 // // Expected output: "Fire-Air-Water"
 
 
-// *) keys
+// ----> c) keys
 //The keys() method of Array instances returns a new array iterator object that contains the keys for each index in the array.
 
 // const array_2 = ['a', 'b', 'c'];
@@ -340,7 +336,7 @@
 // This assumes "en" locale and UTC timezone - your results may vary
 
 
-// *) values
+// ----> c) values
 //The values() method of Array instances returns a new array 
 //iterator object that iterates the value of each item in the array.
 
