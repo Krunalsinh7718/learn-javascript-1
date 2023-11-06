@@ -69,9 +69,9 @@
 //output: index of "b" =>  1
 
 //----> c) lastIndexOf()
-//find element index. If element not exist returns -1.
+//find element index of matched last element. If element not exist returns -1.
 //if multiple elements exist with same name it returns index of last element
-// const arr12 = ['a', 'b', 'c', 'b'];
+// const arr12 = ['a', 'b', 'c', 'b', 'b', 'b'];
 // console.log('last index of "b" => ',arr12.lastIndexOf('b'));
 //output: last index of "b" =>  3
 
