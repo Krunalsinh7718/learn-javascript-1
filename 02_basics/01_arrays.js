@@ -41,6 +41,23 @@
 // );
 //output arr7 => [ 'a', 'b', 'c', 'd' ]
 
+// 2a) merge arrays (using spread operator(...) javascript) ############################################################
+// const arrCars = ['Tata Safari', 'Mahendra SUV 700', 'JEEP Compass', 'Skoda Kushaq'];
+// const arrBikes = ['Royal Enfield thunderbird', 'Royal Enfield classic', 'Royal Enfield Himalayan', 'bajaj pulsar'];
+// const arrVehicle = [...arrCars, ...arrBikes];
+// console.log("arrVehicle => ", arrVehicle);
+//output arrVehicle =>['Tata Safari', 'Mahendra SUV 700', 'JEEP Compass', 'Skoda Kushaq','Royal Enfield thunderbird', 'Royal Enfield classic', 'Royal Enfield Himalayan', 'bajaj pulsar']
+
+// 2b) septate element from array (using object destructuring) ############################################################
+//we can septate element from array using object destructuring for elements frequent use
+// const [vehicle1 = "unknown vehicle", vehicle2, ...others] = arrVehicle;
+//array's zero index position element copy to vehicle1 and one index position element copy to vehicle2
+//we can also define default value by = operator (vehicle1 = "unknown vehicle")
+//we can get other elements by spread operator (...others)
+// console.log("vehicle1 => ", car1,", vehicle2 => ", vehicle2);
+//output =>  vehicle1 => Tata Safari, vehicle2 => Mahendra SUV 700
+
+
 // 3) check and search methods ############################################################
 //----> a) every()
 //A function to execute for each element in the array. 
@@ -57,9 +74,6 @@
 // const test_chk_first_char = val => val[0] === 'a';
 // console.log(arr8_a.every(test_chk_first_char));
 //output: true
-
-
-
 
 //----> b) indexOf()
 //find element index. If element not exist returns -1.
@@ -323,7 +337,7 @@
 // Expected output: 1
 // Expected output: 2
 
-// *) toLocaleString
+// ----> d) toLocaleString
 //The toLocaleString() method of Array instances returns a string representing the elements of the array. 
 //The elements are converted to strings using their toLocaleString methods and 
 //these strings are separated by a locale-specific string (such as a comma ","). 
@@ -336,7 +350,7 @@
 // This assumes "en" locale and UTC timezone - your results may vary
 
 
-// ----> c) values
+// ----> e) values
 //The values() method of Array instances returns a new array 
 //iterator object that iterates the value of each item in the array.
 
