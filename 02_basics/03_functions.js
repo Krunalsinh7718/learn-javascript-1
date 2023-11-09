@@ -57,9 +57,9 @@
 
 //Example 2) ``````````````````````````````
 //xyz();
-const xyz = function(){
-    console.log("hello xyz");
-}
+// const xyz = function(){
+//     console.log("hello xyz");
+// }
 //In above example we can not call function before declaration
 
 //----> c) using Arrow function expressions
@@ -67,30 +67,39 @@ const xyz = function(){
 //Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
 //Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't have access to the new.target keyword.
 
-const sumNum = (num1 , num2) => num1 + num2;
+// const sumNum = (num1 , num2) => num1 + num2;
 // console.log(sumNum(1 , 2));
 //output : 3
 
 
 //if single parameter is there we can omit parentheses
-const getCalcVal = rowVal => rowVal * rowVal - 5;
-console.log(getCalcVal(5));
+// const getCalcVal = rowVal => rowVal * rowVal - 5;
+// console.log(getCalcVal(5));
 //output 20
 
-const getUserInfo = () =>  ({name : "Krunalsinh"});
-const getUserInfo1 = () => ["a","b","c","d"]
-console.log(typeof getUserInfo1());
-
+// const getUserInfo = () =>  ({name : "Krunalsinh"});
+// console.log(getUserInfo());
 //output : { name: 'Krunalsinh' }
-//to return object we need scope 
+//to return object we need scope. parentheses create block scope for us
 
 
 //----> d) using immediately invoked function expression (IIFE)
 //An immediately invoked function expression, or IIFE (pronounced iffy), is a function that is called immediately after it is defined.
 // to call function immediately and avoid global pollution we can use IIFE
+(function message(){
+    console.log("hello world");
+})();
+//above function called named IIFE
+
 (function(){
     console.log("hello javascript");
-})()
+})();
+//output : hello javascript
+
+( name => console.log(`hello ${name}`))('javascript');
+//output : hello javascript
+
+
 
 
 // 2) default parameter ############################################################
