@@ -22,10 +22,12 @@ console.table([toys, toy1]);
 function sum2(val1, val2){return  val1 + val2}
 function sum3(val1, val2, val3) {return val1 + val2 + val3} 
 let sum = sum2;
+sum2.prototype.getNum = () => 5;
 let addFun = sum;
 sum = sum3;
 console.log(sum.toString());
 console.log(addFun.toString());
+
 //output
 //function sum3(val1, val2, val3) {return val1 + val2 + val3}
 //function sum2(val1, val2){return  val1 + val2}
