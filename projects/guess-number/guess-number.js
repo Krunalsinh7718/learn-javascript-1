@@ -20,8 +20,10 @@ function startGame() {
             const isValidNum = validateNumber(guessNum);
             if(!isValidNum) {
                 setMessage('<span style="color:red;">Please enter number between 1 and 100</span>')
-            }else{
+            }else if(guesses.length < 10){
                 checkGuess(guessNum);
+            }else{
+                endGame();
             }
         })
     }
@@ -80,8 +82,8 @@ function endGame() {
     numberSubmitBtn.setAttribute('disabled','');
 
     setMessage(`
-        <span style="color:green;">You have guess the right number.</span>
-        <div onclick="restartGame()">Click hear to restart the game.<div>
+        <div class="success-msg" >You have guess the right number.</div>
+        <div onclick="restartGame()" class="restart-btn">Click hear to restart the game.</div>
     `);
 
 }
