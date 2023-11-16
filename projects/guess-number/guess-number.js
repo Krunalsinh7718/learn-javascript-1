@@ -9,19 +9,33 @@ let numberSubmitBtn = document.querySelector("#numberSubmitBtn");
 let prevGuesses = document.querySelector("#prevGuesses");
 let remgAttempts = document.querySelector("#remgAttempts");
 let dispMessage = document.querySelector("#dispMessage");
+startGame();
 
-if(playGame){
-    numberSubmitBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        setDefault();
-        const guessNum = parseInt(numberInput.value);
-        const isValidNum = validateNumber(guessNum);
-        if(!isValidNum) {
-            setMessage('<span style="color:red;">Please enter number between 1 and 100</span>')
-        }else{
-            checkGuess(guessNum);
-        }
-    })
+function startGame() {
+    if(playGame){
+        numberSubmitBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setDefault();
+            const guessNum = parseInt(numberInput.value);
+            const isValidNum = validateNumber(guessNum);
+            if(!isValidNum) {
+                setMessage('<span style="color:red;">Please enter number between 1 and 100</span>')
+            }else{
+                checkGuess(guessNum);
+            }
+        })
+    }
+}
+
+function restartGame() {
+    playGame = true;
+    numberSubmitBtn.removeAttribute('disabled');
+    setMessage('');
+    guesses = [];
+    setGuess(guesses);
+    attempts = 10;
+    randNo = Math.floor(Math.random() * 100 + 1)
+    console.log("guess number :", randNo);
 }
 
 function validateNumber(guess){
@@ -63,5 +77,11 @@ function checkGuess(guess){
 
 function endGame() {
     playGame = false;
-    guesses = [];
+    numberSubmitBtn.setAttribute('disabled','');
+
+    setMessage(`
+        <span style="color:green;">You have guess the right number.</span>
+        <div onclick="restartGame()">Click hear to restart the game.<div>
+    `);
+
 }
