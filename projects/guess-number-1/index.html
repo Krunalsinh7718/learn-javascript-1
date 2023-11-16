@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       .form-wrapper{
+        padding: 30px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
+       }
+       .game-rules{
+        padding: 10px;
+        background-color: bisque;
+        border-radius: 15px;
+        margin-bottom: 20px;
+       }
+       .game-rules ul{
+        margin-left: 15px;
+       }
+       .game-rules h4{
+        margin-bottom: 12px;
+       }
+       .form-inner-wrapper{
+        display: flex;
+        height: 30px;
+        margin-bottom: 20px;
+       }
+       input{
+        padding: 3px 15px;
+       }
+       .messages-box p{
+        margin-bottom: 10px;
+       }
+       .restart-btn{
+        background: #000;
+        display: inline-block;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+       }
+       .success-msg{
+        color: green;
+        margin-bottom: 10px;
+       }
+    </style>
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="game-rules">
+            <h4>Game Rules</h4>
+            <ul>
+                <li>Guess number between 1 to 100.</li>
+                <li>You have 10 attempts.</li>
+            </ul>
+        </div>
+        <div>
+            <form>
+                <div class="form-inner-wrapper">
+                    <input type="number"  id="numberInput" />
+                    <input type="submit" value="Submit" id="numberSubmitBtn" >
+                </div>
+            </form>
+        </div>
+        <div class="messages-box">
+            <p><span>Your previous guesses</span> <span id="prevGuesses"></span></p>
+            <p><span>Number of attempts remaining</span> <span id="remgAttempts">10</span></p>
+            <p id="dispMessage"></p>
+        </div>
+    </div>
+    <script src="./guess-number-1.js"></script>
+</body>
+</html>
