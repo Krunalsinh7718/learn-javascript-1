@@ -51,6 +51,10 @@
         color: green;
         margin-bottom: 10px;
        }
+       .fail-msg{
+        color: red;
+        margin-bottom: 10px;
+       }
     </style>
 </head>
 <body>
@@ -72,8 +76,8 @@
         </div>
         <div class="messages-box">
             <p><span>Your previous guesses</span> <span id="prevGuesses"></span></p>
-            <p><span>Number of attempts remaining</span> <span id="remgAttempts">10</span></p>
-            <p id="dispMessage"></p>
+            <h2><span>Number of attempts remaining</span> <span id="remgAttempts">10</span></h2>
+            <h2 id="dispMessage"></h2>
         </div>
     </div>
     <script src="./guess-number.js"></script>
