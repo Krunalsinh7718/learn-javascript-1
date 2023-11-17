@@ -19,7 +19,24 @@
             display: flex;
             flex-wrap: wrap;
             margin: 0;
-            list-style-type: decimal;
+            list-style-type: none;
+        }
+        li{
+            counter-increment: section;
+            position: relative;
+        }
+        li:before{
+            content: counter(section);
+            position: absolute;
+            left: 6px;
+            top: 5px;
+            height: 20px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: #fff;
+            color: #000;
+            text-align: center;
+            box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.388);
         }
         a{
             color: skyblue;
