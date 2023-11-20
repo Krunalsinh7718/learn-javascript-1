@@ -37,7 +37,7 @@
 // }, false)
 
 //read below event properties
-// type, timestamp, defaultPrevented, 
+// type, timestamp, preventDefault, 
 //target, toElement, sourceElement, currentTarget
 //clientX, clientY, screenX, screenY
 //altKey, ctrlKey, shiftKey, keyCode
@@ -103,6 +103,7 @@ const linkImage = document.querySelector("#linkImage");
 // mainList.addEventListener('click', function(eventObject) {
 //     eventObject.stopPropagation();
 //     console.log("main list clicked");
+//     console.log(eventObject.toElement);
 //  },true)
  
 //  image4.addEventListener('click', function(eventObject) {
@@ -141,4 +142,27 @@ const linkImage = document.querySelector("#linkImage");
 //     //     const parent = eventObject.target.parentNode.parentNode;
 //     //     parent.removeChild(child);
 //     // }
+// })
+
+//6) action button with loader
+
+//method 1) ----> using addEventListener, attach event all the elements  
+// this method works fine when you have few elements
+// const allActionBtns = document.querySelectorAll(".action-btn");
+
+// allActionBtns.forEach( btn => {
+//     btn.addEventListener('click', function(event) {
+//         btn.classList.toggle('loading-state');
+//     })
+// })
+
+//method 2) ----> using addEventListener, attach event to parent element and identify element by tag name or any unique selector
+// this method works fine when you have thousands of element. 
+// to attach click event all the elements can be costly operation.
+// const allBtnsWrapper = document.querySelector(".all-btns-wrapper");
+
+// allBtnsWrapper.addEventListener('click', function(eventObject) {
+//     if(eventObject.target.tagName === 'BUTTON'){
+//         eventObject.target.classList.toggle('loading-state');
+//     }
 // })

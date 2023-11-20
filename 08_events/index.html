@@ -41,6 +41,47 @@
         a{
             color: skyblue;
         }
+        .action-btn{
+            position: relative;
+            min-height: 50px;
+            padding-inline: 30px;
+            box-shadow: none;
+            outline: none;
+            background-color: yellowgreen;
+            color: #000;
+            border-radius: 10px;
+        }
+        .action-btn:before{
+            content: "";
+            height: 30px;
+            width: 30px;
+            border: 5px solid;
+            border-color: darkgreen darkgreen  darkgreen transparent;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 50%;
+            opacity: 0;
+            animation: loadingState 600ms infinite linear;
+        }
+        @keyframes loadingState{
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .action-btn span{
+            position: relative;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .action-btn.loading-state span{
+            opacity: 0;
+        }
+        .action-btn.loading-state::before{
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -59,6 +100,17 @@
         <li><a href="https://www.google.com" id="linkImage">link Image<img src="https://picsum.photos/200/300?random=11" alt="Random Image" height="300" width="200" /></a>  </li>
         <li>text element</li>
     </ul>
+    <div class="all-btns-wrapper">
+        <button class="action-btn">
+            <span>Action Button 1</span>
+        </button>
+        <button class="action-btn">
+            <span>Action Button 2</span>
+        </button>
+        <button class="action-btn">
+            <span>Action Button 3</span>
+        </button>
+    </div>
     <script src="./events.js"></script>
 </body>
 </html>
