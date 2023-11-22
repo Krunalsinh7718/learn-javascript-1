@@ -64,3 +64,20 @@
 //     clearInterval(colorInterval);
 //     colorInterval = null;
 // }
+
+//c) ---> XMLHttpRequest()
+const url = "https://dummyjson.com/users/1";
+const dataCall = new XMLHttpRequest();
+const userCard = document.querySelector(".user-card");
+
+dataCall.open('GET',url);
+dataCall.onreadystatechange = function() {
+    if(this.readyState === 4){
+        const data = JSON.parse(this.responseText);
+        console.log(data);
+        userCard.querySelector(".user-image").src = data.image;
+        userCard.querySelector(".user-name").innerText = data.firstName +" "+ data.maidenName +" "+ data.lastName;
+        userCard.querySelector(".user-email").innerHTML = data.email;
+    }
+}
+dataCall.send();
