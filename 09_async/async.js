@@ -67,17 +67,61 @@
 
 //c) ---> XMLHttpRequest()
 const url = "https://dummyjson.com/users/1";
-const dataCall = new XMLHttpRequest();
-const userCard = document.querySelector(".user-card");
+// const dataCall = new XMLHttpRequest();
+// const userCard = document.querySelector(".user-card");
 
-dataCall.open('GET',url);
-dataCall.onreadystatechange = function() {
-    if(this.readyState === 4){
-        const data = JSON.parse(this.responseText);
+// dataCall.open('GET',url);
+// dataCall.onreadystatechange = function() {
+//     if(this.readyState === 4){
+//         const data = JSON.parse(this.responseText);
+//         console.log(data);
+//         userCard.querySelector(".user-image").src = data.image;
+//         userCard.querySelector(".user-name").innerText = data.firstName +" "+ data.maidenName +" "+ data.lastName;
+//         userCard.querySelector(".user-email").innerHTML = data.email;
+//     }
+// }
+// dataCall.send();
+
+//d) ---> Promis()
+//[Ex. 1] ----------------
+// const promis1 = new Promise(function(resolve,reject){
+//     const error = false;
+
+//     if(!error){
+//         resolve("success");
+//     }else{
+//         reject("something went wrong.");
+//     }
+// })
+// promis1.then(() => {
+//     console.log("success");
+// })
+// promis1.catch((error) => {
+//     console.log(error);
+// })
+// promis1.finally(() => {
+//     console.log("preocess done");
+// })
+
+
+//e) ---> fetch() with Promis()
+
+// fetch(url)
+// .then( response => response.json() )
+// .then(data => console.log(data) )
+// .catch( error => console.log(error) )
+// .finally(() => console.log("process done"))
+
+//e) ---> fetch() with async await
+const usersUrl = "https://jsonplaceholder.typicode.com/users";
+async function getUser() {
+    try{
+        const response = await fetch(usersUrl)
+        const data = await response.json();
         console.log(data);
-        userCard.querySelector(".user-image").src = data.image;
-        userCard.querySelector(".user-name").innerText = data.firstName +" "+ data.maidenName +" "+ data.lastName;
-        userCard.querySelector(".user-email").innerHTML = data.email;
+    }catch(error){
+        console.log("error :", error);
     }
 }
-dataCall.send();
+
+getUser();
