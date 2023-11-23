@@ -105,23 +105,78 @@ const url = "https://dummyjson.com/users/1";
 
 
 //e) ---> fetch() with Promis()
-
 // fetch(url)
 // .then( response => response.json() )
 // .then(data => console.log(data) )
 // .catch( error => console.log(error) )
 // .finally(() => console.log("process done"))
 
-//e) ---> fetch() with async await
-const usersUrl = "https://jsonplaceholder.typicode.com/users";
-async function getUser() {
-    try{
-        const response = await fetch(usersUrl)
-        const data = await response.json();
-        console.log(data);
-    }catch(error){
-        console.log("error :", error);
-    }
-}
+//f) ---> fetch() with async await
+// const usersUrl = "https://jsonplaceholder.typicode.com/users";
+// async function getUser() {
+//     try{
+//         const response = await fetch(usersUrl)
+//         const data = await response.json();
+//         console.log(data);
+//     }catch(error){
+//         console.log("error :", error);
+//     }
+// }
 
-getUser();
+// getUser();
+
+//g) ---> async await vs promise
+// function promisFunc(resolve, reject){
+//     const condition = false;
+//     setTimeout((success) => {
+//         success ? resolve(true) : reject(false);
+//     },
+//     2000,
+//     condition)
+// }
+
+// const promis2 = new Promise(promisFunc);
+// promis2
+// .then(function(data) {
+//     console.log(data);
+// })
+// .catch(function(data) {
+//     console.log(data);
+// })
+// .finally(function() {
+//     console.log("all process done");
+// })
+
+// function doTask(){
+//     const condition = false;
+//     return new Promise((resolve,reject) => {
+//         setTimeout(function (success) {
+//             console.log("task done");
+
+//             success ? resolve(true) : reject(false);
+//         }, 
+//         2000,
+//         condition);
+//     })
+// }
+// async function doProcess1() {
+//     try{
+//         const result = await doTask();
+//         console.log(result);
+//     }catch(error){
+//         console.log(error);
+//     }
+// }
+
+// doProcess1();
+
+//h) ---> handle error in then
+// let promise = new Promise(function(resolve, reject) {
+//     setTimeout(() => reject("error!"), 1000);
+//   });
+  
+//   // resolve runs the first function in .then
+//   promise.then(
+//     result => console.log("success :",result), // shows "done!" after 1 second
+//     error => console.log("error :",error) // doesn't run
+//   );
