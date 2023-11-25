@@ -33,6 +33,7 @@ chai.logMe();
 // masalaChai.logMe();
 
 // console.log(chai instanceof User);
+
 /*````````````````````````````````````````````````````````````````````````````````
 // using instanceof method we can check the specified object 
 // derived from specified class or not.
