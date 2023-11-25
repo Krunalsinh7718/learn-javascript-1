@@ -11,5 +11,5 @@ function createUser(username, id ,pass) {
     this.pass = pass;
 }
 
-const user1 = new createUser("Suresh",1245, "abx123478");
+const user1 = new createUser("Suresh", 1245, "abx123478");
 console.log(user1);
