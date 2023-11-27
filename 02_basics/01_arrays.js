@@ -48,14 +48,20 @@
 // console.log("arrVehicle => ", arrVehicle);
 //output arrVehicle =>['Tata Safari', 'Mahendra SUV 700', 'JEEP Compass', 'Skoda Kushaq','Royal Enfield thunderbird', 'Royal Enfield classic', 'Royal Enfield Himalayan', 'bajaj pulsar']
 
-// 2b) septate element from array (using object destructuring) ############################################################
+// 2b) septate element from array (using array destructuring) ############################################################
+
 //we can septate element from array using object destructuring for elements frequent use
-// const [vehicle1 = "unknown vehicle", vehicle2, ...others] = arrVehicle;
+// const allVeh1 = [undefined , 'Royal Enfield classic', 'Royal Enfield Himalayan', 'bajaj pulsar'];
+// const [vehicle1 = "unknown vehicle", vehicle2, ...others] = allVeh1;
+// console.log(vehicle1, vehicle2);
+
 //array's zero index position element copy to vehicle1 and one index position element copy to vehicle2
+
 //we can also define default value by = operator (vehicle1 = "unknown vehicle")
+
 //we can get other elements by spread operator (...others)
 // console.log("vehicle1 => ", car1,", vehicle2 => ", vehicle2);
-//output =>  vehicle1 => Tata Safari, vehicle2 => Mahendra SUV 700
+//output =>  vehicle1 => unknown vehicle, vehicle2 => Royal Enfield classic
 
 
 // 3) check and search methods ############################################################
@@ -295,9 +301,9 @@
 //----> a) entries()
 //it returns a new array iterator object that contains the key/value pairs for each index in the array.
 
-// const array23 = ['a', 'b', 'c'];
+const array23 = ['a', 'b', 'c'];
 
-// const iterator1 = array23.entries();
+const iterator1 = array23.entries();
 
 // console.log(iterator1.next().value);
 // // Expected output: Array [0, "a"]

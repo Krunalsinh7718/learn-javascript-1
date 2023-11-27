@@ -24,10 +24,12 @@
 //----> b) using function expression
 //we can store functions in variables
 //The function keyword can be used to define a function inside an expression.
-//The function name. Can be omitted, in which case the function is anonymous.
+//The function name. Can be omitted, in this case the function is anonymous.
+
 // const sum = function(num1, num2) {
 //     return num1 + num2;
 // }
+
 // console.log(sum(true, true));
 //output => 1
 
@@ -65,7 +67,8 @@
 //----> c) using Arrow function expressions
 //we can write function shorter way
 //Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
-//Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't have access to the new.target keyword.
+//Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. 
+//They also don't have access to the new.target keyword.
 
 // const sumNum = (num1 , num2) => num1 + num2;
 // console.log(sumNum(1 , 2));
@@ -84,7 +87,8 @@
 
 
 //----> d) using immediately invoked function expression (IIFE)
-//An immediately invoked function expression, or IIFE (pronounced iffy), is a function that is called immediately after it is defined.
+//An immediately invoked function expression, or IIFE (pronounced iffy), 
+//is a function that is called immediately after it is defined.
 // to call function immediately and avoid global pollution we can use IIFE
 (function message(){
     console.log("hello world");

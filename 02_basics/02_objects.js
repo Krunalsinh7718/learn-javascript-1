@@ -15,6 +15,8 @@ const obj3 = {1 : "a", "name_2": "b", "3 1": "c" , true: "d", [sym1] : "e"};
 // //output obj3.name_2 => b
 // console.log("obj3.true => ",obj3.true);
 // //output obj3.true => d
+// console.log("obj3.true => ",obj3[sym1]);
+// //output obj3.[sym1] => 3
 
 //----> b) using square brackets 
 
@@ -67,28 +69,42 @@ when key is number, string with space or symbol. we can only access properties w
 //----> b) Object.assign
 //method copies all enumerable own properties from one or more source objects to a target object. 
 //It returns the modified target object.
+
 // console.log(Object.assign({}, obj4, obj5));
+
 //output =>  { a: '1', b: '2', c: '3', d : "4", e : "5", f : "6" } 
 
 //4)  septate properties from object (object destructuring)  ############################################################
+
 //we can septate properties from object for some frequent uses
-// const obj7a = {name : "Rajiv", surname : "Shah",gender: "male", age : 40, address: "loream ipsum" }
+
+// const obj7a = {name : "Rajiv", surname : "Shah", gender: "male", age : 40, address: "loream ipsum" }
 // const {name, age, address : location} = obj7a;
+
 //It will extract name and age from obj7
 //we can set alias name using colon sign (address : location)
+
 // console.log("name => ", name, "age => ", age," location => ", location);
+
 //output => name =>  Rajiv age =>  40  location =>  loream ipsum
 
 
 //5) delete object property  ############################################################
+
 //The delete operator deletes a property from an object:
+
 //The delete operator is designed to be used on object properties. 
+
 //after delete property when we try to access object it returns "undefined"
+
 //It has no effect on variables or functions.
 
 // const obj7 = {a : "apple", b : "banana", c : "charry" };
+
 // delete obj7.c;
+
 // console.log("obj7 => ",obj7);
+
 //output obj7 => {a : "apple", b : "banana" }
 
 /* * * * * 
@@ -99,6 +115,7 @@ The delete operator should not be used on predefined JavaScript object propertie
 
 
 //5)  object to array  ############################################################
+
 // const obj8 = {a : "apple", b : "banana", c : "charry" };
 
 //----> a) get object keys
@@ -120,7 +137,8 @@ The delete operator should not be used on predefined JavaScript object propertie
 // const obj9 = {a : "apple", b : "banana", c : "charry" };
 
 //----> a) hasOwnProperty()
-//method returns a boolean indicating whether this object has the specified property as its own property (as opposed to inheriting it).
+//method returns a boolean indicating whether this object has the specified 
+//property as its own property (as opposed to inheriting it).
 // console.log("Is obj9 has 'd' property => ", obj9.hasOwnProperty('d'));
 //output => Is obj9 has 'd' property =>  false
 
