@@ -8,7 +8,7 @@
 // let amount = 5000;
 
 // if(amount  > 4000) console.log("amount is grater then 4000"), console.log("add required amount");
-//we can add multiple line using by comma but we should avoid write multiline using comma because it easy readable code.
+//we can add multiple line using by comma but we should avoid write multiline using comma because it is not easy readable code.
 
 
 // 2) else if ladder  ############################################################
@@ -88,16 +88,16 @@
 
 
 // 6) The Nullish Coalescing Operator (??) ############################################################
-let name = undefined;
-let text = null;
-let text1 = 10;
-let text2 = 20;
-let result = name ?? text ?? text1 ?? text2;
-console.log(result);
+// let name = undefined;
+// let text = null;
+// let text1 = 10;
+// let text2 = 20;
+// let result = name ?? text ?? text1 ?? text2;
+// console.log(result);
 
 // 7) Ternary operator ############################################################
 
-'a' === 'b' ? console.log("a === b") : console.log("a !== b");
+// 'a' === 'b' ? console.log("a === b") : console.log("a !== b");
 
 
 // 8) truthy and falsy values ############################################################

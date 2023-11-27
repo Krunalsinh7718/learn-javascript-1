@@ -25,6 +25,8 @@
 //     if(index === 4){
 //         console.log("---> 5 detected.");
 //         continue;
+//         console.log("other statement 1");
+//         console.log("other statement 2");
 //     }
 //     console.log(element);
 // }
