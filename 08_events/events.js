@@ -2,7 +2,7 @@
 
 //attachEvent()
 //jquery on
-
+//addEventListener
 
 
 // ----> a) add function in event attribute
