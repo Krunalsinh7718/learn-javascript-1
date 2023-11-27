@@ -2,7 +2,7 @@ const score = new Number(500000.1234);
 const amount = new Number(1000000);
 /* -------- numbers-------------- */
 
-// console.log(score.toFixed(2)); // for set fixed point
+console.log(score.toFixed(2)); // for set fixed point
 // console.log(score.toString(), typeof score.toString()); // number to string conversion
 // console.log(amount.toLocaleString('en-IN')) // convert number format to indian format
 
@@ -18,10 +18,10 @@ const amount = new Number(1000000);
 // console.log("floor", Math.floor(25.51245)); // returns floor value
 // console.log("round",Math.round(25.51245)); // returns round value
 // console.log("ceil",Math.ceil(25.51245)); // returns ceil value
-// console.log("truncate'",Math.trunc(25.12323)); // truncate floting part and return integer value
+// console.log("truncate'",Math.trunc(25.12323)); // truncate floating part and return integer value
 // console.log("square root √'",Math.sqrt(25)); // returns square root value
 
 //get random number from given range
 const min = 5;
 const max = 17;
-setInterval(() => console.log(Math.floor(Math.random() * (max - min + 1)) + min),2000);
+// setInterval(() => console.log(Math.floor(Math.random() * (max - min + 1)) + min),2000);

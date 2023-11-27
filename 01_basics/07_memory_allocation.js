@@ -2,7 +2,7 @@
 let apple = "apple";
 let fruit = apple;
 apple = "red apple";
-console.table([apple, fruit]);
+// console.table([apple, fruit]);
 
 //------------pass by reference (pass by reference)
 let car = {
@@ -12,21 +12,27 @@ let car = {
 
 let vehicle = car;
 car.type = "suv";
-console.table([car, vehicle]);
+// console.table([car, vehicle]);
 
 let toys = ['aeroplane', 'horse', 'monkey', 'blocks', 'cars'];
 let toy1 = toys;
 toys[0] = 'cactus';
-console.table([toys, toy1]);
+// console.table([toys, toy1]);
 
-function sum2(val1, val2){return  val1 + val2}
-function sum3(val1, val2, val3) {return val1 + val2 + val3} 
-let sum = sum2;
-sum2.prototype.getNum = () => 5;
-let addFun = sum;
-sum = sum3;
-console.log(sum.toString());
+function sum2(val1, val2){
+    abcNum = 6;
+    return  val1 + val2
+}
+
+let calcFun = sum2;
+let addFun = sum2;
+sum2.defNum = 5;
+
+console.log(calcFun.toString());
+console.log(calcFun.defNum);
+console.log("-------------------");
 console.log(addFun.toString());
+console.log(sum2.defNum );
 
 //output
 //function sum3(val1, val2, val3) {return val1 + val2 + val3}

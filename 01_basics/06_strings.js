@@ -5,7 +5,8 @@ const text2 = "The quick brown fox~ jumps. over the lazy dog. If the dog barked,
 //0) length of string
 // console.log(text.length);
 
-//1) string functions abd properties (run below code in browser and check Prototype for attached methods and properties of string class)
+//1) string functions abd properties (run below code in browser and 
+//check Prototype for attached methods and properties of string class)
 //console.log(text1);
 
 //2) get character at specific index
@@ -25,7 +26,7 @@ const text2 = "The quick brown fox~ jumps. over the lazy dog. If the dog barked,
 //5) slice, devide strings
 // /*1) slice */ console.log(text2.slice(4)); //return sub string from start index
 // /*2) slice */ console.log(text2.slice(4,19)); //return sub string between start and end index
-// /*3) slice */ console.log(text2.slice(-9, -5)); //return sub string between start and end index (also takes negative index for end start)
+// /*3) slice */ console.log(text2.slice(-9, -1)); //return sub string between start and end index (also takes negative index for end start)
 // /*4) split */ console.log(text2.split(' ')); //split string from given string and return array of splited strings
 // /*5) substring */ console.log(text2.substring(4,19)); //same as slice return sub string between start and end index
 
@@ -45,10 +46,30 @@ const text2 = "The quick brown fox~ jumps. over the lazy dog. If the dog barked,
 // /*1) repeat */ console.log(text1.repeat(2)); //repeat string with given count
 
 
-//9) modify string, convert string (useful for text comparision in conditions)
+//9) modify string, convert string (useful for text comparison in conditions)
 // /*1) trim */ console.log("  abcd  ".trim()); //use to remove white spaces from start and end of string
 //other trim function => trimEnd(), trimRight(), trimStart(), trimLeft()
 // /*2) toLowerCase */ console.log("HELLO".toLowerCase()); //return toLowerCase string
 // /*3) toUpperCase */ console.log("world".toUpperCase()); //return toUpperCase string
 // /*4) toString */ let num1 = 11; console.log(num1.toString(), typeof num1.toString()); //convert to string
 
+
+/*
+difference between String.slice and String.substring
+What they have in common:
+
+If start equals stop: returns an empty string
+If stop is omitted: extracts characters to the end of the string
+If either argument is greater than the string's length, the string's length will be used instead.
+Distinctions of substring():
+
+If start > stop, then substring will swap those 2 arguments.
+If either argument is negative or is NaN, it is treated as if it were 0.
+Distinctions of slice():
+
+If start > stop, slice() will return the empty string. ("")
+If start is negative: sets char from the end of string, exactly like substr() in Firefox. 
+This behavior is observed in both Firefox and IE.
+If stop is negative: sets stop to: string.length – Math.abs(stop) (original value), 
+except bounded at 0 (thus, Math.max(0, string.length + stop)) as covered in the ECMA
+*/

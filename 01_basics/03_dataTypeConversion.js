@@ -1,27 +1,32 @@
 
 let num_a = "33";
 let numberVal_a = Number(num_a);
-// console.table([{numberVal_a : numberVal_a, numberVal_a_type: typeof numberVal_a}]);
+console.table([{numberVal_a : numberVal_a, numberVal_a_type: typeof numberVal_a}]);
 // "33" => 33 (number)
 
 let num_b = "33abc";
 let numberVal_b = Number(num_b);
-// console.table([{numberVal_b : numberVal_b, numberVal_b_type: typeof numberVal_b}]);
+console.table([{numberVal_b : numberVal_b, numberVal_b_type: typeof numberVal_b}]);
 //"33abc" => NaN (number)
 
 let num_c = null;
 let numberVal_c = Number(num_c);
-// console.table([{numberVal_c : numberVal_c, numberVal_c_type: typeof numberVal_c}]);
+console.table([{numberVal_c : numberVal_c, numberVal_c_type: typeof numberVal_c}]);
 //null => 0 (number)
 
 let num_d = undefined;
 let numberVal_d = Number(num_d);
-// console.table([{numberVal_d : numberVal_d, numberVal_d_type: typeof numberVal_d}]);
+console.table([{numberVal_d : numberVal_d, numberVal_d_type: typeof numberVal_d}]);
 //undefined => NaN (number)
 
 let num_e = true;
 let numberVal_e = Number(num_e);
 // console.table([{numberVal_e : numberVal_e, numberVal_e_type: typeof numberVal_e}]);
+//true => 1 (number)
+
+let num_e_1 = "";
+let numberVal_e_1 = Number(num_e_1);
+console.table([{numberVal_e_1 : numberVal_e_1, numberVal_e_1_type: typeof numberVal_e_1}]);
 //true => 1 (number)
 
 let num_f = "";
@@ -32,7 +37,7 @@ let numberVal_f = Boolean(num_f);
 let num_g = "bac";
 let numberVal_g = Boolean(num_g);
 // console.table([{numberVal_g : numberVal_g, numberVal_g_type: typeof numberVal_g}]);
-//"" => true (boolean)
+//bac => true (boolean)
 
 let num_h = 0;
 let numberVal_h = Boolean(num_h);
@@ -53,6 +58,11 @@ let num_k = undefined;
 let numberVal_k = Boolean(num_k);
 // console.table([{numberVal_k : numberVal_k, numberVal_k_type: typeof numberVal_k}]);
 //undefined => false (boolean)
+
+let num_k_1 = 11;
+let numberVal_k_1 = Boolean(num_k_1);
+// console.table([{numberVal_k_1 : numberVal_k_1, numberVal_k_1_type: typeof numberVal_k_1}]);
+//11 => true (boolean)
 
 let num_l = 33;
 let numberVal_l = String(num_l);
@@ -94,9 +104,5 @@ let numberVal_s = Object(num_s);
 // console.table([{numberVal_s : numberVal_s, numberVal_s_type: typeof numberVal_s}]);
 //undefined => {} (object)
 
-// [numberVal_f].forEach( e => {
-//     console.log(e);
-//     console.table([{var : e, varType: typeof e}]);
-// })
 
 

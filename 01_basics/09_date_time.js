@@ -10,7 +10,7 @@ const date = new Date();
 // console.log("Local Date String =>", date.toLocaleDateString());
 
 
-// console.log(new Date(2023, 0, 23, 5, 3).toLocaleString()); //custom date format
+// console.log(new Date(1991, 12, 31, 5, 3).toLocaleString()); //custom date format
 // console.log(new Date("12-31-1991").toLocaleString()); //custom date format
 
 // let myTimeStamp =  Date.now(); console.log(myTimeStamp);//get timestamp (milliseconds)
@@ -18,12 +18,8 @@ const date = new Date();
 // console.log(Math.floor(Date.now() / 1000));// time stamp milliseconds to seconds
 
 // console.log(date.getDate()); //get date only
-// console.log(date.getMonth() + 1); //get month only
+// console.log(date.getMonth() + 1); //get month only (return index 0 to 11,,, so always add 1)
 // console.log(date.getFullYear()); //get year only
-
-
-
-
 
 
 //1) compare two dates----------------------------------------------------------------------------------
@@ -117,13 +113,13 @@ const date = new Date();
 // })
 // console.log('date style short (DD/MM/YYYY)=>',newDate7);
 
-// //---i) date style medium (DD-mm-YYYY)
+// //---i) date style medium (DD-mon-YYYY)
 // const newDate8 = date.toLocaleString('default', {
 //     dateStyle: "medium",
 // })
-// console.log('date style medium (DD-mm-YYYY)=>',newDate8);
+// console.log('date style medium (DD-month-YYYY)=>',newDate8);
 
-// //---j) date style long (D mmm YYYY)
+// //---j) date style long (D month YYYY)
 // const newDate9 = date.toLocaleString('default', {
 //     dateStyle: "long",
 // })

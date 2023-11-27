@@ -1,22 +1,22 @@
 Math.PI = 55;
-console.log(Math.PI);
+// console.log(Math.PI);
 //we can not set value of Math.PI because in it's property description it's writable false
 
 const piDescription = Object.getOwnPropertyDescriptor(Math,'PI');
 // console.log(piDescription);
 //we can check any property description with Object.getOwnPropertyDescriptor factory method
 
-let defaultUser = {
-    name : "mainUser",
-    email : "abc@abc.com",
-    password : "abc123xyz"
-}
+// let defaultUser = {
+//     name : "mainUser",
+//     email : "abc@abc.com",
+//     password : "abc123xyz"
+// }
 
-Object.defineProperty(defaultUser,"name",{
-    configurable: false,
-    writable: false,
-    enumerable: false
-})
+// Object.defineProperty(defaultUser,"name",{
+//     configurable: false,
+//     writable: false,
+//     enumerable: false
+// })
 //configurable
 //the type of this property cannot be changed between data property and accessor property, and
 //the property may not be deleted, and
@@ -39,7 +39,7 @@ Object.defineProperty(defaultUser,"name",{
 //enumerable
 //true if and only if this property shows up during enumeration of the properties on the corresponding object. Defaults to false.
 
-for (let [key,value] of Object.entries(defaultUser)) {
-    console.log(key, ": ", value);
-}
+// for (let [key,value] of Object.entries(defaultUser)) {
+//     console.log(key, ": ", value);
+// }
 //in above code we can not iterate name property because it's set enumerable: false
