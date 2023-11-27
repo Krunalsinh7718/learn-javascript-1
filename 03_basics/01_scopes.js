@@ -5,9 +5,9 @@ if(true){
     var c = "c";
 }
 
-// console.log(a);
-// console.log(b);
-// console.log(c);
+console.log(a);
+console.log(b);
+console.log(c);
 
 //in above example variable "c" is only accessible because it's declare with "var" keyword
 //let and const variables accessible in block scope
