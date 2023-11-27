@@ -1,3 +1,10 @@
+//Getters and setters are used to protect your data, particularly when creating classes.
+//For each instance variable, a getter method returns its value while a setter method sets or updates its value. 
+//Given this, getters and setters are also known as accessors and mutators, respectively.
+
+//By convention, getters start with the word "get" and setters with the word "set", 
+//followed by a variable name. In both cases the first letter of the variable's name is capitalized:
+
 
 // 1) getter and setter on classes
 

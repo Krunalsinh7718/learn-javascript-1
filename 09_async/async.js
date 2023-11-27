@@ -66,7 +66,7 @@
 // }
 
 //c) ---> XMLHttpRequest()
-const url = "https://dummyjson.com/users/1";
+// const url = "https://dummyjson.com/users/1";
 // const dataCall = new XMLHttpRequest();
 // const userCard = document.querySelector(".user-card");
 

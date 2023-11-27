@@ -22,17 +22,17 @@ class Teacher extends User{
 }
 
 const chai = new Teacher("krunalsinh", "kaabc@xyz.com", "123Abc123");
-chai.logMe();
+// chai.logMe();
 
 /*````````````````````````````````````````````````````````````````````````````````
 // we can inherit class using "extends" keyword 
-// and must have to call super constructor in derived class's constructor at top  
+// and must have to call super with arguments constructor in derived class's constructor at top  
 .................................................................................*/
 
 // const masalaChai = new User("masalachai");
 // masalaChai.logMe();
 
-// console.log(chai instanceof User);
+console.log(chai instanceof User);
 
 /*````````````````````````````````````````````````````````````````````````````````
 // using instanceof method we can check the specified object 
@@ -60,4 +60,4 @@ class Person{
 const hitesh = new Person("Hitesh", "1234");
 const rajesh = new Person("Rajesh", "1234");
 
-console.log(Person.compareId(hitesh,rajesh));
+// console.log(Person.compareId(hitesh,rajesh));
