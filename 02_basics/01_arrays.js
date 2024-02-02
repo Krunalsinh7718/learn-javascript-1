@@ -251,6 +251,20 @@
 // console.log(arr19.toSorted());
 // console.log(arr19);
 
+//Numeric Sort
+
+//acceding result
+// const points = [40, 100, 1, 5, 25, 10];
+// points.sort(function(a, b){return a - b});
+
+//descending result
+// const points = [40, 100, 1, 5, 25, 10];
+// points.sort(function(a, b){return b - a});
+
+//random order
+// const points = [40, 100, 1, 5, 25, 10];
+// points.sort(function(){return 0.5 - Math.random()});
+
 //----> c) splice()
 // returns array of given range form original array,
 //and removes the element of given range from original array
