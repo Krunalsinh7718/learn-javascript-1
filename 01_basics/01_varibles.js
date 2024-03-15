@@ -1,14 +1,14 @@
-var a = "hello a"
-let b = "hello b"
-const c = "hello c"
-d = "hello d"
-e = "hello e " + false
-f = 43110 +true+' f'
-g = 43110 +' g '+true
-h = 43110 + undefined
-i = 43110 + null
+// var a = "hello a"
+// let b = "hello b"
+// const c = "hello c"
+// d = "hello d"
+// e = "hello e " + false
+// f = 43110 +true+' f'
+// g = 43110 +' g '+true
+// h = 43110 + undefined
+// i = 43110 + null
 
-console.table([a,b,c,d,e,f,g,h,i]);
+// console.table([a,b,c,d,e,f,g,h,i]);
  
 
 /*
@@ -21,18 +21,18 @@ whether it's declared inside or outside the function.
 */
 
 //[Ex. 1]--------------------------------------
-var varibleTest1 = "Hello test";
-{
-    var varibleTest1 = "helllo xyz xyz";
-}
-console.log(varibleTest1);
+// var varibleTest1 = "Hello test";
+// {
+//     var varibleTest1 = "helllo xyz xyz";
+// }
+// console.log(varibleTest1);
 //output : "helllo xyz xyz"
 
-let varibleTest2 = "Hello test";
-{
-    let varibleTest2 = "helllo xyz xyz";
-}
-console.log(varibleTest2);
+// let varibleTest2 = "Hello test";
+// {
+//     let varibleTest2 = "helllo xyz xyz";
+// }
+// console.log(varibleTest2);
 //output : "Hello test"
 
 /*
@@ -42,4 +42,14 @@ even if they are in different scope
 the varible declare with let and they have same name 
 will not overwrite string if they are in different scope
 */
- 
+
+function example() {
+    let b = "hi";
+    if (true) {
+        let a = "hello";
+    }
+    if (true) {
+        console.log(a);
+    }
+}
+example();

@@ -51,9 +51,10 @@
 // 2b) septate element from array (using array destructuring) ############################################################
 
 //we can septate element from array using object destructuring for elements frequent use
-// const allVeh1 = [undefined , 'Royal Enfield classic', 'Royal Enfield Himalayan', 'bajaj pulsar'];
-// const [vehicle1 = "unknown vehicle", vehicle2, ...others] = allVeh1;
-// console.log(vehicle1, vehicle2);
+const allVeh1 = [undefined , 'Royal Enfield classic', 'Royal Enfield Himalayan', 'bajaj pulsar'];
+const [vehicle1 = "unknown vehicle", vehicle2 , ...others] = allVeh1;
+const {1 : bike , 0 :  unknownVehicle =  "unknown vehicle", ...otherVehicle} = allVeh1;
+console.log(unknownVehicle, otherVehicle);
 
 //array's zero index position element copy to vehicle1 and one index position element copy to vehicle2
 
@@ -315,9 +316,9 @@
 //----> a) entries()
 //it returns a new array iterator object that contains the key/value pairs for each index in the array.
 
-const array23 = ['a', 'b', 'c'];
+// const array23 = ['a', 'b', 'c'];
 
-const iterator1 = array23.entries();
+// const iterator1 = array23.entries();
 
 // console.log(iterator1.next().value);
 // // Expected output: Array [0, "a"]
